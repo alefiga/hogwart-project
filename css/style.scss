@@ -142,7 +142,7 @@ h2, h3, h4, h5 {
 
 @media screen and (max-width: 640px) {
   .nav {
-    width: 21.25%;
+    width: 23.25%;
 
   }
 }
@@ -234,7 +234,7 @@ html::after {
   content: '';
   width: 100%;
   height: 100vh;
-  background: url('../images/siatka.png') 0 0 repeat-y;
+ /* background: url('../images/siatka.png') 0 0 repeat-y;*/
   background-size: 100%;
   position: fixed;
   left: 0;
@@ -776,7 +776,7 @@ h2.quidditch {
 
 }
 
-.active, .dot:hover {
+ .dot:hover {
   background-color: #9e0031;
 }
 
