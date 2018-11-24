@@ -149,14 +149,7 @@ h2, h3, h4, h5 {
   z-index: 10;
   top: 5vh;
   right: 2.5vw;
-  background: #131615;
-  /*
-  @media screen and (max-width: 960px) {
-    .hamburger {
-      right: 1vw;
-    }
-  }
-  */ }
+  background: #131615; }
   .hamburger__patty {
     position: absolute;
     top: 50%;
@@ -164,7 +157,7 @@ h2, h3, h4, h5 {
     transform: translate(-50%, -50%);
     height: 2px;
     width: 50%;
-    backgroud-clip: padding-box;
+    /*    backgroud-clip: padding-box;*/
     background: #f7f7f7;
     transition: all 0.8s cubic-bezier(0.86, 0, 0.07, 1); }
     .hamburger__patty:nth-child(1) {
@@ -210,7 +203,6 @@ html::after {
   pointer-events: none; }
 
 body {
-  /*  background-image: url('../images/hogwart-bg.jpg');*/
   background-size: 100vh; }
 
 /*quotation*/
@@ -228,7 +220,7 @@ body {
   text-align: center;
   position: relative; }
   .quotation h2 {
-    padding-top: 0vw;
+    padding-top: 0;
     margin-top: -1vw;
     padding-bottom: 2vw;
     font-size: 1.6em;
@@ -288,7 +280,7 @@ p {
   height: 60px;
   width: 48%;
   font-size: 1.6em;
-  padding: 0 0em;
+  padding: 0;
   cursor: pointer;
   transition: 800ms ease all;
   outline: auto !important;
@@ -347,15 +339,6 @@ p {
   margin-bottom: 0.75vw;
   position: relative; }
 
-.about h2:after {
-  /*  content: '';
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    right: 0;
-    top: 0;
-    background: #9e0031;*/ }
-
 .about .col-center {
   line-height: 1.5; }
 
@@ -374,16 +357,11 @@ p {
 
 @media screen and (max-width: 960px) {
   .frame.left-bottom {
-    padding-top: 0em; }
+    padding-top: 0; }
 
   .frame.right-side {
-    padding-top: 0em; } }
+    padding-top: 0; } }
 /*houses*/
-/*h2.characteristic,
-h2.subject,
-h2.quidditch {
-  padding-left: 21.85%;
-}*/
 .houses {
   display: grid;
   grid-template-columns: 22% 22% 22% 22%;
@@ -416,7 +394,6 @@ h2.quidditch {
   width: 100%;
   top: calc(50% - 0.55em);
   left: 0;
-  /*  padding: 0 3vw;*/
   font-size: 3em;
   text-align: center;
   font-style: italic;
@@ -430,7 +407,6 @@ h2.quidditch {
   width: 100%;
   top: calc(50% - 0.55em);
   left: 0;
-  /*  padding: 0 3vw;*/
   font-size: 3em;
   text-align: center;
   font-style: italic;
@@ -444,7 +420,6 @@ h2.quidditch {
   width: 100%;
   top: calc(50% - 0.55em);
   left: 0;
-  /*  padding: 0 3vw;*/
   font-size: 3em;
   text-align: center;
   font-style: italic;
@@ -458,7 +433,6 @@ h2.quidditch {
   width: 100%;
   top: calc(50% - 0.55em);
   left: 0;
-  /*  padding: 0 3vw;*/
   font-size: 3em;
   text-align: center;
   font-style: italic;
@@ -469,15 +443,19 @@ h2.quidditch {
 .house .house-show:hover {
   position: relative; }
 
-/*.subject .frame:hover {
-  transform: rotate(360deg);
-  transition: all 2s ease-in-out;
-
-}*/
 /*subjects*/
+.subject .frame {
+  /*  transition: all 0.8s ease-in-out;
+    overflow: hidden;*/ }
+
+.subject .frame:hover {
+  overflow: hidden;
+  transition: all 0.8s ease-in-out; }
+
 .subject .frame img:hover {
-  box-shadow: 0 0 10px black;
-  transition: all 0.3s ease-in-out; }
+  box-shadow: 0 0 20px black;
+  transition: all 0.8s ease-in-out;
+  transform: scale(1.3); }
 
 .subject h3 {
   font-weight: 900;
@@ -504,11 +482,6 @@ h2.quidditch {
     grid-template-columns: 100%;
     grid-template-rows: none;
     grid-gap: 0 4.4%; } }
-/*
-.subjects .subject img {
-  border-radius: 50%;
-}
-*/
 .more {
   display: none; }
 
@@ -585,7 +558,7 @@ h2.quidditch {
   top: 7.3%;
   width: auto;
   margin-top: -22px;
-  padding: 8em 12px 0px 12px;
+  padding: 8em 12px 0 12px;
   color: #9e0031;
   font-weight: bold;
   font-size: 18px;
@@ -615,6 +588,9 @@ h2.quidditch {
 
 .dot:hover {
   background-color: #9e0031; }
+
+.dot.active {
+  background: #9e0031; }
 
 /* Fading animation */
 .fade {
@@ -700,11 +676,10 @@ h2.quidditch {
     left: 36%; } }
 /*---------------------------------------------*/
 a {
-  font-family: Montserrat-Regular;
   font-size: 14px;
   line-height: 1.7;
   color: #666666;
-  margin: 0px;
+  margin: 0;
   transition: all 0.4s;
   -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
@@ -715,17 +690,17 @@ a:focus {
 
 a:hover {
   text-decoration: none;
-  color: #909090; }
+  color: #92657b; }
 
 /*---------------------------------------------*/
 form p {
   font-size: 14px;
   line-height: 1.7;
   color: #666666;
-  margin: 0px; }
+  margin: 0; }
 
 ul, li {
-  margin: 0px;
+  margin: 0;
   list-style-type: none; }
 
 /*---------------------------------------------*/
@@ -836,8 +811,6 @@ iframe {
   justify-content: space-between;
   padding: 110px 130px 157px 130px; }
 
-/*------------------------------------------------------------------
-[  ]*/
 .contact100-pic {
   width: 405px;
   padding-top: 0; }
@@ -847,8 +820,6 @@ iframe {
   background-image: url("../images/photo-form.jpg");
   border-radius: 10px; }
 
-/*------------------------------------------------------------------
-[  ]*/
 .contact100-form {
   width: 390px; }
 
@@ -877,7 +848,6 @@ textarea.input100 {
   padding: 14px 30px;
   resize: none; }
 
-/*---------------------------------------------*/
 .wrap-input100 {
   position: relative;
   width: 100%;
@@ -892,8 +862,6 @@ textarea.input100 {
   line-height: 1.5;
   color: #666666; }
 
-/*------------------------------------------------------------------
-[ Focus ]*/
 .focus-input100 {
   display: block;
   position: absolute;
@@ -903,7 +871,6 @@ textarea.input100 {
   z-index: -1;
   width: 100%;
   height: 100%;
-  box-shadow: 0px 0px 0px 0px;
   color: #2f3421; }
 
 .input100:focus + .focus-input100 {
@@ -912,11 +879,11 @@ textarea.input100 {
 
 @-webkit-keyframes anim-shadow {
   to {
-    box-shadow: 0px 0px 60px 25px;
+    box-shadow: 0 0 60px 25px;
     opacity: 0; } }
 @keyframes anim-shadow {
   to {
-    box-shadow: 0px 0px 60px 25px;
+    box-shadow: 0 0 60px 25px;
     opacity: 0; } }
 .symbol-input100 {
   display: -webkit-box;
@@ -944,8 +911,7 @@ textarea.input100 {
   color: #2f3421;
   padding-left: 22px; }
 
-/*------------------------------------------------------------------
-[ Button ]*/
+/* Button */
 .container-contact100-form-btn {
   width: 100%;
   display: -webkit-box;
@@ -981,8 +947,7 @@ textarea.input100 {
 .contact100-form-btn:hover {
   background: rgba(0, 0, 0, 0.7); }
 
-/*------------------------------------------------------------------
-[ Responsive ]*/
+/*RWD*/
 @media (max-width: 1200px) {
   .contact100-pic {
     width: 33.5%; }
@@ -994,7 +959,6 @@ textarea.input100 {
     padding: 110px 80px 157px 90px; }
 
   .contact100-pic {
-    /*width: 100%;*/
     display: none; }
 
   .contact100-form {
@@ -1011,8 +975,7 @@ textarea.input100 {
 @media (max-width: 576px) {
   .wrap-contact100 {
     padding: 50px 15px 80px 15px; } }
-/*------------------------------------------------------------------
-[ Alert validate ]*/
+/*Alert validate*/
 .validate-input {
   position: relative; }
 
